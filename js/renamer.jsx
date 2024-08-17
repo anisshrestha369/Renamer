@@ -66,7 +66,7 @@ function rename(prefix, name, suffix, autoIncrement) {
 
     for (var i = 0; i < layers.length; i++) {
       if ((prefix || suffix) && !name) {
-        layerName = prefix + " " + layers[i].name + " " + suffix;
+        layerName = prefix + " " + layers[i].name + " " + suffix + " ";
       }
 
       if (increment) {
@@ -77,62 +77,4 @@ function rename(prefix, name, suffix, autoIncrement) {
       }
     }
   }
-
-  // if (layersOfSelectedObjects.length === 0) {
-  //   var emptyConfirm = confirm(
-  //     "No objects selected. Do you want to rename all layers?"
-  //   );
-
-  // if(emptyConfirm){
-
-  // }
-  // }
-
-  // if (!prefix && !layerName && !suffix) {
-  //   var confirmDefaultRename = confirm(
-  //     "All fields are empty. Do you want to remove layer names?"
-  //   );
-
-  //   if (!confirmDefaultRename) {
-  //     return;
-  //   } else {
-  //     autoIncrement = false;
-  //   }
-  // }
-
-  // var newLayerName = "";
-
-  // if (prefix) {
-  //   newLayerName += prefix + " ";
-  // }
-  // if (layerName) {
-  //   newLayerName += layerName + " ";
-  // }
-  // if (suffix) {
-  //   newLayerName += suffix;
-  // }
-
-  // newLayerName = newLayerName.replace(/\s+$/, "");
-
-  // var renamedLayers = {};
-  // var counter = 1;
-
-  // for (var i = 0; i < selectedObjects.length; i++) {
-  //   var object = selectedObjects[i];
-  //   var layer = object.layer;
-
-  //   if (!renamedLayers[layer.name]) {
-  //     if (autoIncrement) {
-  //       layer.name = newLayerName + " " + counter;
-  //       counter === 1 ? newLayerName : newLayerName + " " + counter;
-  //       counter++;
-  //     } else {
-  //       layer.name = newLayerName;
-  //     }
-
-  //     renamedLayers[layer.name] = true;
-  //   }
-  // }
-
-  // alert(newLayerName);
 }

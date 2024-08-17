@@ -2,24 +2,26 @@
 <html>
   <head>
     <title>Renamer</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
-    <div>
+    <h2>Layer Renamer</h2>
+
+    <div class="input-fields">
       <input id="prefix" type="text" placeholder="Prefix" />
       <input id="layerName" type="text" placeholder="Layer name" />
       <input id="suffix" type="text" placeholder="Suffix" />
     </div>
 
-    <div>
+    <div class="auto-increment">
       <input id="autoIncrement" type="checkbox" />
       <label for="autoIncrement">Auto Increment</label>
     </div>
 
-    <div>
-      <button id="rename">Rename</button>
-    </div>
-
-    <button id="reload">Reload</button>
+    <button id="rename" type="button">Rename</button>
+    <button id="reload" hidden>Reload</button>
 
     <script src="./js/CSInterface.js"></script>
     <script src="./js/main.js"></script>
