@@ -17,6 +17,10 @@ body {
   color: #ffffff;
 }
 
+h2 {
+  margin-bottom: 0.415em;
+}
+
 input {
   padding: 0.32rem 0.48rem;
   background-color: #424242;

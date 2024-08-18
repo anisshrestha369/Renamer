@@ -50,23 +50,29 @@ function rename(prefix, name, suffix, autoIncrement) {
   }
 
   function renameLayers(layers, prefix, name, suffix, increment) {
-    var layerName = "";
-
     if (!prefix && !name && !suffix) {
       var emptyNameConfirm = confirm("No names provided. Rename to default?");
 
       if (!emptyNameConfirm) return;
     }
 
-    if (prefix) layerName += prefix + " ";
-    if (name) layerName += name + " ";
-    if (suffix) layerName += suffix + " ";
-
     var counter = 1;
 
     for (var i = 0; i < layers.length; i++) {
+      if ((prefix || suffix) && name) {
+        var layerName = "";
+
+        layerName += prefix ? prefix + " " : "";
+        layerName += name + " ";
+        layerName += suffix ? suffix + " " : "";
+      }
+
       if ((prefix || suffix) && !name) {
-        layerName = prefix + " " + layers[i].name + " " + suffix + " ";
+        var layerName = "";
+
+        layerName += prefix ? prefix + " " : "";
+        layerName += layers[i].name + " ";
+        layerName += suffix ? suffix + " " : "";
       }
 
       if (increment) {

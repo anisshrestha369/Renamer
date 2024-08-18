@@ -30,10 +30,10 @@
           <Type>Panel</Type>
           <Menu>Renamer</Menu>
           <Geometry>
-						<Size>
-							<Width>240</Width>
-							<Height>180</Height>
-						</Size>
+            <Size>
+              <Width>240</Width>
+              <Height>180</Height>
+            </Size>
           </Geometry>
         </UI>
       </DispatchInfo>
