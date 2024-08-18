@@ -65,7 +65,7 @@ function rename(prefix, name, suffix, autoIncrement) {
       layerName += name ? name + " " : layers[i].name + " ";
       layerName += suffix ? suffix + " " : "";
 
-      if (!prefix && !name && !suffix) {
+      if (emptyNameConfirm) {
         layerName = "";
       }
 
