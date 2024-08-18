@@ -59,20 +59,14 @@ function rename(prefix, name, suffix, autoIncrement) {
     var counter = 1;
 
     for (var i = 0; i < layers.length; i++) {
-      if ((prefix || suffix) && name) {
-        var layerName = "";
+      var layerName = "";
 
-        layerName += prefix ? prefix + " " : "";
-        layerName += name + " ";
-        layerName += suffix ? suffix + " " : "";
-      }
+      layerName += prefix ? prefix + " " : "";
+      layerName += name ? name + " " : layers[i].name + " ";
+      layerName += suffix ? suffix + " " : "";
 
-      if ((prefix || suffix) && !name) {
-        var layerName = "";
-
-        layerName += prefix ? prefix + " " : "";
-        layerName += layers[i].name + " ";
-        layerName += suffix ? suffix + " " : "";
+      if (!prefix && !name && !suffix) {
+        layerName = "";
       }
 
       if (increment) {
