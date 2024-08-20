@@ -78,3 +78,5 @@ function rename(prefix, name, suffix, autoIncrement) {
     }
   }
 }
+
+function lockLayers() {}
